@@ -28,19 +28,19 @@ def register():
     if request.method =='POST':
         username=request.form['username']
         email=request.form['email']
-        password=bcrypt.generate_password_hash(request.form['password'])
+        password=request.form['password']
+        passwd_hash=bcrypt.generate_password_hash(password)
 
 
-        new_user=User(username=username,email=email,passwd_hash=password)
+        new_user=User(username=username,email=email,passwd_hash=passwd_hash)
 
         async def main():
             db.session.add(new_user)
-            await asyncio.sleep(1)
+            await asyncio.sleep(3)
             db.session.commit()
-            await asyncio.sleep(2)
-            return redirect(url_for('login'))
-
         asyncio.run(main())
+
+        return redirect(url_for('login'))
         
         
 

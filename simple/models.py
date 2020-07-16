@@ -16,7 +16,7 @@ class User(db.Model,UserMixin):
 
 
     def __repr__(self):
-        return f"{self.usernames}'s account"
+        return f"{self.username}'s account"
 
 
 
