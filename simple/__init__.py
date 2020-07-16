@@ -19,5 +19,10 @@ login_manager=LoginManager(app)
 
 
 from . import routes
+from .models import User
+
+@login_manager.user_loader
+def load_user(id):
+    return User.query.get(int(id))
 
 

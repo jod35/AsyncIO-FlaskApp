@@ -1,6 +1,8 @@
 from simple import db
+from flask_login import UserMixin
+from simple import login_manager
 
-class User(db.Model):
+class User(db.Model,UserMixin):
     id=db.Column(db.Integer,primary_key=True)
     username=db.Column(db.String(25),nullable=False)
     email=db.Column(db.String(40),nullable=False)
@@ -15,3 +17,7 @@ class User(db.Model):
 
     def __repr__(self):
         return f"{self.usernames}'s account"
+
+
+
+
