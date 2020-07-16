@@ -42,21 +42,34 @@ header a{
     border: none;
     padding: 20px;
     text-transform: uppercase;
-    border-radius: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.mybtn:hover{
+    background-color: white;
+    color: rgb(31, 180, 180);
+    border: 1px solid rgb(31, 180, 180);
 }
 .form{
-    width: 50%;
+    width: 60%;
     margin: auto;
     color: rgb(31, 180, 180);
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px rgba(70, 80, 80, 0.267);
+    padding: 20px;
+    border-radius: 20px;
 }
 .form-group{
     padding: 20px;
 }
 .form-control{
-    width: 100%;
-    padding: 5px;
+    width: 90%;
+    padding: 15px;
+    text-align: center;
     border: none;
     border-bottom: 1px solid rgb(31, 180, 180);
+    background-color: inherit;
 }
 footer{
     color: white;

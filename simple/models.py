@@ -12,7 +12,7 @@ class User(db.Model,UserMixin):
     def __init__(self,username,email,passwd_hash):
         self.username=username
         self.email=email
-        self.passwd_hash=password
+        self.passwd_hash=passwd_hash
 
 
     def __repr__(self):
