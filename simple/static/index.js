@@ -1,6 +1,7 @@
 const signup_form=document.querySelector('#signup-form');
 const signup_btn=document.querySelector('#signup-btn');
 
+
 //handle the sign up form
 signup_form.addEventListener('submit',showSignUpAction);
 
@@ -13,3 +14,5 @@ function showSignUpAction(){
     signup_btn.style.fontWeight="bolder";
 
 }
+
+
